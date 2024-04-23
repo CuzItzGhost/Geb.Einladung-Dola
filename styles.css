@@ -1,11 +1,4 @@
-.fullscreen-image {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    object-fit: cover;
-}
+
 
 .square {
     position: absolute;
@@ -77,4 +70,18 @@
 
 .page.active {
     opacity: 1;
+}
+
+.fullscreen-image {
+    width: 100%; /* Breite auf 100% des Elternelements setzen */
+    height: auto; /* Automatische Höhe, um das Seitenverhältnis beizubehalten */
+}
+
+/*.square,
+#square2,
+.square_black1,
+.square_black2 {
+    width: 10%; /* 10% der Bildschirmbreite für die Breite des Quadrats */
+    height: 10%; /* 10% der Bildschirmhöhe für die Höhe des Quadrats */
+*/
 }
