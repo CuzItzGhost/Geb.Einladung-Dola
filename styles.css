@@ -6,7 +6,7 @@
     right: 0;
     width: 100px;
     height: 100px;
-    background-color: white;
+    background-color: gray;
     z-index: 999;
     clip-path: polygon(0% 100%, 0% 0%, 100% 0%);
     margin: 0;
@@ -19,7 +19,7 @@
     left: 0;
     width: 100px;
     height: 100px;
-    background-color: white;
+    background-color: gray;
     z-index: 999;
     clip-path: polygon(0 0, 100% 0, 100% 100%);
     margin: 0; /* Marge auf 0 setzen */
@@ -93,3 +93,34 @@ html, body {
 	position: relative; /* Positionierung relativ */
 }
 
+
+.wiggle-text {
+    animation: wiggle 2s infinite;
+}
+.wiggle-text2 {
+    animation: wiggle 2s infinite;
+}
+
+@keyframes wiggle {
+    0% { transform: translateY(-5px); }
+    50% { transform: translateY(5px); }
+    100% { transform: translateY(-5px); }
+}
+
+.wiggle-text {
+    position: fixed;
+    bottom: 120px; /* Anpassen der vertikalen Position */
+    right: 20px; /* Anpassen der horizontalen Position */
+    z-index: 1000; /* Stelle sicher, dass der Text über dem Dreieck liegt */
+    transform-origin: bottom right;
+	color: red; /* Ändere die Textfarbe nach Bedarf */
+	font-weight: bold; /* Mache den Text fett */
+}
+.wiggle-text2 {
+    position: fixed;
+    bottom: 120px; /* Anpassen der vertikalen Position */
+    left: 20px; /* Anpassen der horizontalen Position */
+    z-index: 1000; /* Stelle sicher, dass der Text über dem Dreieck liegt */
+    transform-origin: bottom left;
+	color: red; /* Ändere die Textfarbe nach Bedarf */
+	font-weight: bold; /* Mache den Text fett */
