@@ -7,9 +7,17 @@ document.addEventListener('DOMContentLoaded', function() {
     const resizeSquares = () => {
         const pageWidth = window.innerWidth;
         const pageHeight = window.innerHeight;
+        let sizeFactor;
+
+        // Überprüfen, ob die Höhe kleiner ist als die Breite
+        if (pageHeight < pageWidth) {
+            sizeFactor = 0.15; // Faktor für den Fall, dass die Höhe kleiner ist
+        } else {
+            sizeFactor = 0.25; // Faktor für den Fall, dass die Breite kleiner ist
+        }
 
         // Berechnung der neuen Größe für die Quadrate basierend auf der Breite und Höhe der Seite
-        const size = Math.min(pageWidth, pageHeight) * 0.15; // 20% der kleineren Seite
+        const size = Math.min(pageWidth, pageHeight) * sizeFactor;
 
         // Setzen der neuen Größe für die Quadrate
         square1.style.width = size + 'px';
@@ -19,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Setzen der CSS-Variable für die Größe
         const newSize = size + 20;
-		document.documentElement.style.setProperty('--size', newSize + 'px');
+        document.documentElement.style.setProperty('--size', newSize + 'px');
     };
 
     // Event-Listener hinzufügen, um die Größe der Quadrate neu zu berechnen, wenn sich die Fenstergröße ändert
