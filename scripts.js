@@ -1,6 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
     const square1 = document.getElementById('square1');
     const square2 = document.getElementById('square2');
+	const bsquare1 = document.getElementById('square_black1');
+    const bsquare2 = document.getElementById('square_black2');
     const page1 = document.getElementById('page1');
     const page2 = document.getElementById('page2');
 
@@ -24,6 +26,10 @@ document.addEventListener('DOMContentLoaded', function() {
         square1.style.height = size + 'px';
         square2.style.width = size + 'px';
         square2.style.height = size + 'px';
+		bsquare1.style.width = size + 'px';
+        bsquare1.style.height = size + 'px';
+		bsquare2.style.width = size + 'px';
+        bsquare2.style.height = size + 'px';
 
         // Setzen der CSS-Variable für die Größe
         const newSize = size + 20;
