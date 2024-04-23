@@ -107,20 +107,33 @@ html, body {
     100% { transform: translateY(-5px); }
 }
 
+.element {
+    property: var(--size);
+}
+
 .wiggle-text {
     position: fixed;
-    bottom: 120px; /* Anpassen der vertikalen Position */
+    bottom: var(--size); /* Anpassen der vertikalen Position */
     right: 20px; /* Anpassen der horizontalen Position */
     z-index: 1000; /* Stelle sicher, dass der Text über dem Dreieck liegt */
     transform-origin: bottom right;
 	color: red; /* Ändere die Textfarbe nach Bedarf */
 	font-weight: bold; /* Mache den Text fett */
+    font-size: calc(0.1 * var(--size)); /* Setze die Schriftgröße basierend auf dem Faktor */
 }
+
 .wiggle-text2 {
     position: fixed;
-    bottom: 120px; /* Anpassen der vertikalen Position */
+    bottom: var(--size); /* Anpassen der vertikalen Position */
     left: 20px; /* Anpassen der horizontalen Position */
     z-index: 1000; /* Stelle sicher, dass der Text über dem Dreieck liegt */
     transform-origin: bottom left;
 	color: red; /* Ändere die Textfarbe nach Bedarf */
 	font-weight: bold; /* Mache den Text fett */
+    font-size: calc(0.1 * var(--size)); /* Setze die Schriftgröße basierend auf dem Faktor */
+}
+
+body {
+    background-color: black;
+    margin: 0; /* Entferne den Standardabstand des Body-Elements */
+}
