@@ -35,7 +35,7 @@
     width: 0;
     height: 0;
     border-left: 100px solid transparent;
-    border-bottom: 100px solid black;
+    border-bottom: 100px solid rgb(64, 64, 64);
     z-index: 998;
     transform-origin: bottom right;
     transform: rotate(180);
@@ -50,7 +50,7 @@
     width: 0;
     height: 0;
     border-left: 100px solid transparent;
-    border-bottom: 100px solid black;
+    border-bottom: 100px solid rgb(64, 64, 64);
     z-index: 998;
     transform-origin: bottom rightside;
     transform: rotate(90deg);
