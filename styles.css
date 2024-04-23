@@ -89,6 +89,7 @@ html, body {
     max-height: 100vh;
     width: auto;
     height: auto;
-    margin: 0 auto; /* Zentrieren des Bildes horizontal */
+    margin: auto; /* Zentrieren des Bildes horizontal */
+	position: relative; /* Positionierung relativ */
 }
 
